@@ -8,7 +8,7 @@
  margin = { top: 20, bottom: 80, left: 120, right: 60 }
 
 /* LOAD DATA */
-d3.csv("../data/us_homeless_estimate.csv", d3.autoType).then((data) => {
+d3.csv("../../data/us_homeless_estimate.csv", d3.autoType).then((data) => {
   console.log(data);
 
  // x scale - linear, year
@@ -91,7 +91,6 @@ svg
 
   // DRAW LINE
 
-  
   // first, draw the area
   svg.selectAll(".area")
     .data([data])
@@ -123,8 +122,9 @@ svg.selectAll("circle")
   .attr("fill", "steelblue")
   .on("mouseover", (event, d) => {
     const [x, y] = d3.pointer(event);
+    const formatNumber = d3.format(",");
     tooltip.style("display", "block");
-    tooltip.html("Homeless Estimate for " + d.Year + ": " + d.Estimate)
+    tooltip.html("US homeless population estimate for " + d.Year + ": <strong>" + formatNumber(d.Estimate)+ "</strong>")
       .style("left", (x + 10) + "px")
       .style("top", (y - 20) + "px");
   })

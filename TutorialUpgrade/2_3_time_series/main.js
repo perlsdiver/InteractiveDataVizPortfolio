@@ -39,7 +39,7 @@ const yScale = d3
 const xAxis = d3.axisBottom(xScale)
  .tickValues(d3.range(2007, 2023, 1))
  .tickFormat(d3.format("d"));
- 
+
 svg
  .append("g")
  .attr("transform", `translate(0,${height - margin.bottom})`)
@@ -115,6 +115,8 @@ svg
     .attr("stroke-width", 5)
     .attr("d", d => lineGen(d))
 
+
+    
 // then, add a tooltip
 const tooltip = d3.select("#tooltip");
 

@@ -7,6 +7,11 @@ This has three components
 2. Compiled final
 3. Reflection on the process
 
+**Abstract for updated tutorial**
+
+
+**Abstract for final project**
+
 
 
 ##### **3. Reflection**

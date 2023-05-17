@@ -1,7 +1,8 @@
 # Interactive Data Visualization Portfolio
 Portfolio for Interactive Data Visualization (Spring 2023)
+Ian Williams
 
-This has three components
+This portfolio has has three components
 
 1. Updated tutorial
 2. Compiled final
@@ -10,9 +11,10 @@ This has three components
 **Abstract for updated tutorial**
 
 
+
 **Abstract for final project**
 
-
+This project takes a sample of the US Census Bureau's 2020 American Community Survey data and renders an interactive map of New York City. Focusing on housing characteristics, it offers
 
 ##### **3. Reflection**
 
@@ -33,7 +35,7 @@ I saw [this meme](https://www.facebook.com/photo/?fbid=139588109105085&set=gm.10
 
 This class was incredibly challenging for me, the greatest difficulty being maintaining enough of a working grasp of JavaScript syntax to make my d3.js code work. I learned a significant quantity of new information and was exposed to ways of thinking that were far outside of my discipline or learning scope.  I got to meet and connect with students from two very intersting Master's programs at The Graduate Center, and I got to learn from a professional information designer and visualization expert. I was also exposed to several creative practices and ideational tools that I was unaware of. So in that regard, this class was a 'success,' but I feel that where I currently stand, I have failed to grasp some fundamentals and properly execute the code. That is a little deflating.
 
-In retrospect, perhaps I should have taken some time to learn JavaScript ahead of time, or recruited additional support earlier on to help me stay on track. As a student in a PhD program at The Graduate Center, I was on a waitlist for registration and notified of my eligiblity for the class while on my honeymoon, a few days before I returned right before the Spring semester. Prior to notification, I had mapped out an alternative course path for the semester. But the opportunity to take this calss and gain hands-on exposure to D3.js was hard to pass up. So my output reflected this rough starting point, lack of familiarity with the foundations, and a very busy semester with many time commimtents and a few difficult life events that impacted my studies.
+In retrospect, perhaps I should have taken some time to learn JavaScript ahead of time, or recruited additional support earlier on to help me stay on track. As a student in a PhD program at The Graduate Center, I was on a waitlist for registration and notified of my eligiblity for the class while on my honeymoon, a few days before I returned right before the Spring semester. Prior to notification, I had mapped out an alternative course path for the semester. But the opportunity to take this class and gain hands-on exposure to D3.js was hard to pass up. So my output reflected this rough starting point, lack of familiarity with the foundations, and a very busy semester with many time commimtents and a few difficult life events that impacted my studies.
 
 **Data selection and design choices**
 

@@ -7,6 +7,11 @@
  height = window.innerHeight * 0.7,
  margin = { top: 20, bottom: 80, left: 120, right: 60 }
 
+ const state = {
+  sortBy: "Year", // Possible values: "Year", "Estimate"
+};
+
+
 /* LOAD DATA */
 d3.csv("../../data/us_homeless_estimate.csv", d3.autoType).then((data) => {
   console.log(data);
@@ -34,6 +39,7 @@ const yScale = d3
 const xAxis = d3.axisBottom(xScale)
  .tickValues(d3.range(2007, 2023, 1))
  .tickFormat(d3.format("d"));
+ 
 svg
  .append("g")
  .attr("transform", `translate(0,${height - margin.bottom})`)

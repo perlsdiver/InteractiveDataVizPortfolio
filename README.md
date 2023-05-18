@@ -14,7 +14,7 @@ This visualization demonstrates how to make an area chart with a small data set.
 
 **Abstract for final project**
 
-This project takes a sample of the US Census Bureau's 2020 American Community Survey data and renders an interactive map of New York City. Focusing on housing characteristics, it offers
+This project takes a sample of the US Census Bureau's 2020 American Community Survey data and renders an interactive map of New York City. Focusing on housing characteristics, it introduces the viewer to the work of the Plumbing Poverty Project. It then offers the viewer an opportunity to explore tract-level estimates of proportions of inadequate plumbing in occupied buildings, visually depicted as a choropleth map. The viewer is invited to submit a reflection on the observations and experiences through an embedded Google form.
 
 ##### **3. Reflection**
 
@@ -29,7 +29,7 @@ I am still working on the techincal aspects of d3.js, which means I have not yet
 
 I saw [this meme](https://www.facebook.com/photo/?fbid=139588109105085&set=gm.10160358566740469&idorvanity=71041660468) on the Facebook group, 'Reviewer 2 Must Be Stopped!' and thought it was appropriate. Swap out my vision for what my project could be, and where it landed with my ability to execute the code at the point of this reflection.
 
-!(Research meme)[/data/r2_research_paper_meme.jpeg "Research in action")
+![Research meme](/data/r2_research_paper_meme.jpeg)
 
 **Challenges**
 

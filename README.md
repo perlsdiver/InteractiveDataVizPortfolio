@@ -10,7 +10,7 @@ This portfolio has has three components
 
 **Abstract for updated tutorial**
 
-This visualization demonstrates how to make an area chart with a small data set. It depicts annual population estimates of persons experiencing homelesssness in the United States from 2007-2022.
+This visualization demonstrates how to make an area chart with a small data set, with a tooltip. It depicts annual population estimates of persons experiencing homelesssness in the United States from 2007-2022.
 
 **Abstract for final project**
 

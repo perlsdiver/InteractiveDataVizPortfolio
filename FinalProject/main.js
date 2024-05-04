@@ -66,7 +66,8 @@ Promise.all([
 ]).then(([NYCtracts, plumbingData, barData]) => {
 
   state.NYCtracts = tracts;
-  state.plumbingData;
+  state.plumbingData = plumbingData;
+  state.barData = barData;
   init();
 });
   

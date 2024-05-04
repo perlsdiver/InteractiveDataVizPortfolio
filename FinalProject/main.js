@@ -70,7 +70,7 @@ Promise.all([
   state.barData = barData;
   init();
 }).catch(error =>[
-  console.error("Failed to load data", error);
+  console.error("Failed to load data", error)
 ]);
   
 /// Initializing function

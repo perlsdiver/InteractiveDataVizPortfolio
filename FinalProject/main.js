@@ -60,9 +60,9 @@ let state = {
 ///////////////////////////////////////////////////////
 
 Promise.all([
-  d3.json("../data/CensusMerged.json"), // json file taken from NYC Open Data
-  d3.csv("../data/CensusData.csv"), d3.autoType, // census data, wrangled to be easier to read
-  d3.csv("../data/CensusDataBarChartSum.csv", d3.autoType), // seperate file made of borough-level summary data, making it easier to render bar charts
+  fetch("../data/CensusMerged.json").then(response => response.json()), // json file taken from NYC Open Data
+  fetch("../data/CensusData.csv").then(response => response.text()).then(d => d3.csvParse(d, d3.autoType)), // census data, wrangled to be easier to read
+  d3.csv("../data/CensusDataBarChartSum.csv").then(response => response.text()).then(d => d3.csvParse(d, d3.autoType)), // seperate file made of borough-level summary data, making it easier to render bar charts
 ]).then(([NYCtracts, plumbingData, barData]) => {
 
   state.NYCtracts = tracts;

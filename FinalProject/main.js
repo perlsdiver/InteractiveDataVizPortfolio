@@ -60,7 +60,7 @@ let state = {
 ///////////////////////////////////////////////////////
 
 Promise.all([
-  fetch("../data/CensusMerged.json").then(response => response.json()), // json file taken from NYC Open Data
+  d3.json("../data/CensusMerged.json"), // json file taken from NYC Open Data
   d3.csv("../data/CensusData.csv", d3.autotype), // census data, wrangled to be easier to read
   d3.csv("../data/CensusDataBarChartSum.csv", d3.autoType), // seperate file made of borough-level summary data, making it easier to render bar charts
 ]).then(([NYCtracts, plumbingData, barData]) => {

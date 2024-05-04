@@ -65,7 +65,7 @@ Promise.all([
   d3.csv("../data/CensusDataBarChartSum.csv", d3.autoType), // seperate file made of borough-level summary data, making it easier to render bar charts
 ]).then(([NYCtracts, plumbingData, barData]) => {
 
-  state.NYCtracts = tracts;
+  state.NYCtracts = NYCtracts;
   state.plumbingData = plumbingData;
   state.barData = barData;
   init();

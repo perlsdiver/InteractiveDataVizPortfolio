@@ -6,33 +6,6 @@ const width = window.innerWidth * 0.9,
   height = window.innerHeight * 0.9,
   margin = { top: 20, bottom: 50, left: 60, right: 40 };
 
-/////////////
-/// TABS ///
-////////////
-
-// Set the starting tab
-document.getElementById("Introduction").style.display = "block";
-document.querySelector(".tab button:first-child").classList.add("active");
-
-  function openTab(evt, tabName) {
-
-    // Get all elements with class="tabcontent" and hide them
-    const tabcontent = document.getElementsByClassName("tabcontent");
-    for (let i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-  
-    // Get all elements with class="tablinks" and remove the class "active"
-    const tablinks = document.getElementsByClassName("tablinks");
-    for (let i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-  
-    // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
-  }
-
 /** these variables allow us to access anything we manipulate in
 * init() but need access to in draw().
 * All these variables are empty before we assign something to them.*/
@@ -40,14 +13,14 @@ document.querySelector(".tab button:first-child").classList.add("active");
 let barsvg;
 let mapsvg;
 let colorScale;
-// let projection;
+let projection;
 
 //////////////////////////
 /// APPLICATION STATE ////
 /////////////////////////
 
 let state = {
-    NYC_tracts: null,
+    NYCtracts: null,
     plumbingData: null,
     barData: null,
     hover:{
@@ -60,19 +33,87 @@ let state = {
 ///////////////////////////////////////////////////////
 
 Promise.all([
-  d3.json("../data/CensusMerged.json"), // json file taken from NYC Open Data
-  d3.csv("../data/CensusData.csv", d3.autotype), // census data, wrangled to be easier to read
-  d3.csv("../data/CensusDataBarChartSum.csv", d3.autoType), // seperate file made of borough-level summary data, making it easier to render bar charts
-]).then(([NYCtracts, plumbingData, barData]) => {
+  d3.json("../data/CensusMerged.json"), // json file taken from NYC Open Data, merged with Census data
+ d3.csv("../data/CensusData.csv", d3.autotype), // census data, wrangled to be easier to read
+ d3.csv("../data/CensusDataBarChartSum.csv", d3.autoType), // seperate file made of borough-level summary data, making it easier to render bar charts
+]).then(([NYCtracts, plumbingData, barData
 
-  state.NYCtracts = NYCtracts;
-  state.plumbingData = plumbingData;
-  state.barData = barData;
+]) => {
+
+state.NYCtracts = NYCtracts;
+ state.plumbingData = plumbingData;
+ state.barData = barData;
   init();
 }).catch(error =>[
-  console.error("Failed to load data", error)
+  console.error("Failed to load data", error),
+  alert("There was an error loading data. Please check the console for more information."),
 ]);
   
+/// Pre-processing the data
+/// Calculating the density of owner and renter households without plumbing
+
+ // Calculating the density for both "Owner_no_plumbing" and "Renter_no_plumbing" variables
+  // Will use this for map distribution
+  // state.plumbingData.forEach(row => {
+  //   const totalOwner = row.Total_Owner;
+  //   const totalRenter = row.Total_Renter;
+  //   row.Owner_density = (row.Owner_no_plumbing / totalOwner) * 100;
+  //   row.Renter_density = (row.Renter_no_plumbing / totalRenter) * 100;
+  // });
+
+
+d3.json("../data/CensusMerged.json").then(geoData => {
+  geoData.features.forEach(feature => {
+    const relatedData = plumbingData.find(d => d.GEOID === feature.properties.GEOID);
+    if (relatedData) {
+      feature.properties.ownerDensity = calculateDensity(relatedData.Total_Owner, relatedData.Owner_no_plumbing);
+      feature.properties.renterDensity = calculateDensity(relatedData.Total_Renter, relatedData.Renter_no_plumbing);
+    }
+  });
+  state.NYCtracts = geoData;
+  init();
+});
+
+/////////////
+/// TABS ///
+////////////
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Initialize tabs
+  const tabs = document.querySelectorAll(".tablinks");
+  const tabContents = document.querySelectorAll(".tabcontent");
+
+  // Function to open a tab
+  function openTab(evt, tabName) {
+    // Hide all tab contents
+    tabContents.forEach(content => {
+      content.style.display = "none";
+    });
+
+    // Remove "active" class from all tabs
+    tabs.forEach(tab => {
+      tab.classList.remove("active");
+    });
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.classList.add("active");
+  }
+
+  // Add click event listeners to tabs
+  tabs.forEach(tab => {
+    tab.addEventListener('click', function(event) {
+      openTab(event, this.getAttribute('data-tab'));
+    });
+  });
+
+  // Set the default tab to "Introduction"
+  const introTab = document.querySelector(".tablinks[data-tab='Introduction']");
+  if (introTab) {
+    introTab.click();
+  }
+});
+
 /// Initializing function
 
 function init(){
@@ -84,14 +125,7 @@ console.log(state.NYCtracts.map(d => d.properties.GEOID)
 
 (NYCtracts, plumbingData, barData));
 
-  // Calculating the density for both "Owner_no_plumbing" and "Renter_no_plumbing" variables
-  // Will use this for map distribution
-  state.plumbingData.forEach(row => {
-    const totalOwner = row.Total_Owner;
-    const totalRenter = row.Total_Renter;
-    row.Owner_density = (row.Owner_no_plumbing / totalOwner) * 100;
-    row.Renter_density = (row.Renter_no_plumbing / totalRenter) * 100;
-  });
+ 
 
   // Create color scales for both Owner and Renter density
   const colorScaleOwner = d3.scaleSequential()
@@ -132,9 +166,6 @@ function draw() {
     .attr("fill", "none");
 
 }
-
-
-
 
 
 
@@ -207,7 +238,6 @@ function draw() {
 // })
 
 
-
 /// ORIGINAL MAP VERSION
 /// static map worked but could not make it dynamic nor effectively toggle data
 ///
@@ -265,7 +295,7 @@ dropdown.selectAll("option")
 
   // Render the map
   g.selectAll("path")
-    .data(NYC_tracts.features)
+    .data(NYCtracts.features)
     .enter()
     .append("path")
       .attr("d", pathGenerator)

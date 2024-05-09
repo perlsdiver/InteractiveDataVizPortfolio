@@ -3,6 +3,7 @@
     <meta charset="utf-8">
     <title>Interactive Data Visualization: Final Project</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet">
@@ -12,14 +13,16 @@
       <h1>Data 73200: Final Project</h1>
     </div>
 
-  <!-- Here I created a series of tabs -->
-    <div class="tab">
-      <button class="tablinks" onclick="openTab(event, 'References')">References</button>
-      <button class="tablinks" onclick="openTab(event, 'Reflection')">Reflection</button>
-      <button class="tablinks" onclick="openTab(event, 'Map')">Map</button>
-      <button class="tablinks" onclick="openTab(event, 'Overview')">Overview</button>
-      <button class="tablinks" onclick="openTab(event, 'Introduction')">Introduction</button>
-    </div>
+  <!-- Here I created a series of tabs; moved events to the main.js since the original version -->
+  <div class="tab">
+    <button class="tablinks" data-tab="References">References</button>
+    <button class="tablinks" data-tab="Reflection">Reflection</button>
+    <button class="tablinks" data-tab="Map">Map</button>
+    <button class="tablinks" data-tab="Bar-Charts">Bar Charts</button>
+    <button class="tablinks" data-tab="Overview">Overview</button>
+    <button class="tablinks" data-tab="Introduction">Introduction</button>
+  </div>
+
     <!-- The introductory page -->
     <div id="Introduction" class="tabcontent">
       <h3>Introduction</h3>
@@ -28,7 +31,7 @@
       <p>Welcome to my project. Please click and explore the tabs in order of left to right.</p
       <br>
       <div style="text-align: center;">
-      <img src="../data/Standard Plumbing Fixtures -1920'sB.jpg" alt="Standard Fixture Plumbing (source: Internet Archive">  
+      <img src="../data/Standard Plumbing Fixtures -1920'sB.jpg" alt="Standard Fixture Plumbing (source: Internet Archive)">  
       </div>
     </div>
   
@@ -36,23 +39,25 @@
     <div id="Overview" class="tabcontent">
       <h3>Instructions</h3>
       <p>This website asks you, the viewer, to explore an interactive map of New York City. It invites you to imagine maps such as 
-        this as tools of urban governmentality. By this term I mean administration, management, and a general approach to the operation
-        of government as forms of population management(Rose et al, 2006). Information visualization is a practice central to administration of public data; visualizations render information into representations that can trigger action. It is thus important to consider how
-        and in what ways visualizations create impetus for action (or inaction). Data visualizations are inherently political (Boenhert, 2016).
+        this as tools of used in policymaking and managing social problems, or broadly speaking, governance. By this term I mean administration, management, and a general approach to the operation
+        of government as forms of population management(Rose et al, 2006). Information visualization is a practice central to administration of public data; visualizations render information into 
+        representations that can trigger action. It is thus important to consider how and in what ways visualizations create impetus for action (or inaction). Data visualizations are not neutral
+        images that reveal 'truth' in data, they inherently political and are always created and consumed in a larger context (Boenhert, 2016).
       </p>
-      <p>The map you will explore in the next tab ("Map") depicts data from the US Census Bureau's American Community Survey 2015-2020 Five Year Estimates, particularly
-        data on plumbing facilities, using the D3.JS library. Under the Housing Characteristics section of the survey, it reports whether a building has
-        adequate or inadequate plumbing facilities. This is sorted into owner-occupied and renter-occupied, and the available data is
-        organized at the level of Census tract. Tracts are the build block of Census geographic data, adopted in 1940 (US Census Bureau, n.d.).
+      <p>The map you will explore in the next tab ("Map") depicts data from the United States Census Bureau's American Community Survey 2015-2020 Five Year Estimates, particularly
+        data on plumbing facilities, using the D3.JS library. Under the Housing Characteristics section of the survey, it reports whether a building has adequate or inadequate plumbing facilities. 
+        This is sorted into owner-occupied and renter-occupied, and the available data is organized at the level of Census tract. Tracts are the build block of Census geographic data, adopted in 1940 
+        (US Census Bureau, n.d.).
       </p>
-      <p>Plumbing is an interesting question to look at because it is an aspect of "housing" that is often presumed or taken for granted. The buildings marked in
-        this data set are occupied, yet do not have adquate plumbing. An article<a href = https://www.theguardian.com/us-news/2021/sep/27/water-almost-half-million-us-households-lack-indoor-plumbing>
-          published in The Guardian in 2021</a> described the phenomenon of "plumbing poverty" in the United States, where nearly half a million households lack adequate
-          indoor plumbing. Although plumbing poverty has decreased in New York City, it is still significant. It is also a point of intersection between the built environment, 
-          housing, government administration, and social services. Under NYC housing code, it is required that landlords provide functioning water systems and plumbing to tenants 
-          (NYC Department of Housing Preservation and Develompent, 2021). A lack of plumbing, in addition to violations of city code, can indicate a point at which "housing" is not 
-          adequate for modern standards, which could trigger administrative action such as building code inspections, child welfare investigations, or social service outreach, 
-          such as Adult Protective Services. It could also be a flashpoint of legal conflict between property owners and tenants.
+      <p>Plumbing is an interesting characteristic to look at because it is an aspect of "housing" that is often presumed or taken for granted, at least within the United States. While indoor plubming is 
+        historically quite new to the long view of human dwellings, it is an essential characteristic of good hygienge and modern standards of contemporary social welfare. This map offers a view of NYC buildings 
+         marked in this data set as occupied, yet do not have adquate plumbing. An article<a href = https://www.theguardian.com/us-news/2021/sep/27/water-almost-half-million-us-households-lack-indoor-plumbing>
+          published in The Guardian in 2021</a> described the phenomenon of "plumbing poverty" in the United States, where nearly half a million households lack adequate indoor plumbing. Although 
+          plumbing poverty has decreased in New York City, it is still significant and shapes the everday lives of a considerable number of people. It is also a point of intersection between the 
+          built environment, housing, government administration, and social services. Under NYC housing code, it is required that landlords provide functioning water systems and plumbing to tenants 
+          (NYC Department of Housing Preservation and Develompent, 2021). A lack of plumbing, in addition to violations of city code, can indicate a point at which "housing" is not adequate for 
+          modern standards, which could trigger administrative action such as building code inspections, child welfare investigations, or social service outreach, such as Adult Protective Services. 
+          It could also be a flashpoint of legal conflict between property owners and tenants, and also a liminal space where someone may be "housed", but inadequately.
       </p>
       <p>According to <a href=https://kclpure.kcl.ac.uk/portal/files/159767495/Plumbing_Poverty_in_US_Cities.pdf>a 2021 report by The Plumbing Poverty Project</a>, 
         in New York City alone, 65,000 residents are estimated to not have access to piped water. As you explore the map, consider this, and what it might mean for 
@@ -61,7 +66,12 @@
       </p>
       <br>
       <br>
-     <!-- my plan is to have a button for two charts - still working on that -->
+     </div>
+     
+      <div id="Bar-Charts" class="tabcontent">
+      <h3>Bar Charts</h3>
+      <p>This page will display the data in bar charts. You can toggle between owner-occupied and renter-occupied housing units. The data is from the US Census Bureau's American Community Survey 2015-2020 Five Year Estimates.</p>
+      </p>
      <!-- <button onclick="update(data1)">Owner-Occupied Housing</button> -->
      <!-- <button onclick="update(data2)">Renter-Occupied Housing</button> -->
      <!-- <div> -->

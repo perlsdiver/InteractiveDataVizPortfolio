@@ -21,8 +21,13 @@ US Census Bureau, American Community Survey, Selected Housing Characteristics, 5
 
 
  
-**Figure 1: Sketch**
+**Figure 1: Sketches 1 and 2**
 
+
+
+**Figure 2: Sketches 3 and 4**
+
+**Figure 3: Sketches 5 and 6**
 
 **Model**
 

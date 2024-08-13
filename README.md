@@ -61,3 +61,12 @@ Class feedback in the initial presentation helped me to imagine how I might co-p
 
 Another part of our peer demonstrations was getting to see my classmates' design processes, including their iterations, their code snippets, and their mock-ups. It helped me to imagine different ways of putting together my project, as well as how users might interact with it. Offering feedback on theirs, as well, helped me feel a little more confident - that my ability to contribute was not limited to my techinical skill level.
 
+**Sketches**
+
+These are sketches from exercises conducted in class.
+
+![Sketches 1 and 2](/FinalProject/media/sketches-1.jpg)
+
+![Sketches 3 and 4](/FinalProject//media/sketches-2.jpg)
+
+![Sketches 5 and 6](/FinalProject/media/sketches-3.jpg)

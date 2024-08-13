@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for HTML5 for Linux version 5.6.0">
+  <meta charset="utf-8">
+  <title>Final Project - Interactive Data Visualization</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!-- top matter -->
+  <header>
+    <h1 class="banner">Data 73200: Final Project</h1>
+    <!-- Here I created a navbar -->
+    <ul class="navbar">
+      <li class="navtab">
+        <a href="./index.html">Introduction</a>
+      </li>
+      <li class="navtab selected">
+        <a href="./overview.html">Overview</a>
+      </li>
+      <li class="navtab">
+        <a href="./map.html">Map</a>
+      </li>
+      <li class="navtab">
+        <a href="./reflection.html">Reflection</a>
+      </li>
+      <li class="navtab">
+        <a href="./references.html">References</a>
+      </li>
+    </ul>
+  </header>
+  <main>
+    <!-- This is the narrative overview -->
+    <h2 class="section-title">Overview</h2>
+    <p>This website asks you, the viewer, to explore an interactive
+    map of New York City. It invites you to imagine maps such as
+    this as tools of urban governmentality. By this term I mean
+    administration, management, and a general approach to the
+    operation of government as forms of population management(Rose
+    et al, 2006). Information visualization is a practice central
+    to administration of public data; visualizations render
+    information into representations that can trigger action. It is
+    thus important to consider how and in what ways visualizations
+    create impetus for action (or inaction). Data visualizations
+    are inherently political (Boenhert, 2016).</p>
+    <p>The map you will explore in the next tab ("Map") depicts
+    data from the US Census Bureau's American Community Survey
+    2015-2020 Five Year Estimates, particularly data on plumbing
+    facilities, using the D3.JS library. Under the Housing
+    Characteristics section of the survey, it reports whether a
+    building has adequate or inadequate plumbing facilities. This
+    is sorted into owner-occupied and renter-occupied, and the
+    available data is organized at the level of Census tract.
+    Tracts are the build block of Census geographic data, adopted
+    in 1940 (US Census Bureau, n.d.).</p>
+    <p>Plumbing is an interesting question to look at because it is
+    an aspect of "housing" that is often presumed or taken for
+    granted. The buildings marked in this data set are occupied,
+    yet do not have adquate plumbing. An article <a href=
+    "https://www.theguardian.com/us-news/2021/sep/27/water-almost-half-million-us-households-lack-indoor-plumbing">
+    published in The Guardian in 2021</a> described the phenomenon
+    of "plumbing poverty" in the United States, where nearly half a
+    million households lack adequate indoor plumbing. Although
+    plumbing poverty has decreased in New York City, it is still
+    significant. It is also a point of intersection between the
+    built environment, housing, government administration, and
+    social services. Under NYC housing code, it is required that
+    landlords provide functioning water systems and plumbing to
+    tenants (NYC Department of Housing Preservation and
+    Develompent, 2021). A lack of plumbing, in addition to
+    violations of city code, can indicate a point at which
+    "housing" is not adequate for modern standards, which could
+    trigger administrative action such as building code
+    inspections, child welfare investigations, or social service
+    outreach, such as Adult Protective Services. It could also be a
+    flashpoint of legal conflict between property owners and
+    tenants.</p>
+    <p>According to <a href=
+    "https://kclpure.kcl.ac.uk/portal/files/159767495/Plumbing_Poverty_in_US_Cities.pdf">
+    a 2021 report by The Plumbing Poverty Project</a>, in New York
+    City alone, 65,000 residents are estimated to not have access
+    to piped water. As you explore the map, consider this, and what
+    it might mean for people in New York. See the bar chart below
+    for summary representation of this data in a bar chart. You can
+    click on the buttons to toggle between owner-occupied and
+    renter-occupied housing units.</p><br>
+    <br>
+    <!-- my plan is to have a button for two charts - still working on that -->
+     
+    <!-- <button onclick="update(data1)">Owner-Occupied Housing</button> -->
+     
+    <!-- <button onclick="update(data2)">Renter-Occupied Housing</button> -->
+     <!-- <div> -->
+     
+    <!--   <svg id="bar-chart" width="1000" height="500"></svg> -->
+     <!-- </div> -->
+  </main>
+</body>
+</html>

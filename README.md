@@ -29,7 +29,7 @@ I am still working on the techincal aspects of d3.js, which means I have not yet
 
 I saw [this meme](https://www.facebook.com/photo/?fbid=139588109105085&set=gm.10160358566740469&idorvanity=71041660468) on the Facebook group, 'Reviewer 2 Must Be Stopped!' and thought it was appropriate. Swap out my vision for what my project could be, and where it landed with my ability to execute the code at the point of this reflection.
 
-![Research meme](/data/r2_research_paper_meme.jpeg)
+![Research meme](/media/r2_research_paper_meme.jpeg)
 
 **Challenges**
 

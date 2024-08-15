@@ -6,6 +6,9 @@
   <meta charset="utf-8">
   <title>Final Project - Interactive Data Visualization</title>
   <link rel="stylesheet" href="./style.css">
+  <script src="../lib/d3.min.js"></script>
+  <script src="./table.js"></script>
+  <script src="./barcharts.js"></script>
 </head>
 <body>
   <!-- top matter -->
@@ -92,18 +95,21 @@
     it might mean for people in New York. See the bar chart below
     for summary representation of this data in a bar chart. You can
     click on the buttons to toggle between owner-occupied and
-    renter-occupied housing units.</p><br>
+    renter-occupied housing units.</p>
     <br>
-    <
-    <!-- my plan is to have a button for two charts - still working on that -->
-     
-    <!-- <button onclick="update(data1)">Owner-Occupied Housing</button> -->
-     
-    <!-- <button onclick="update(data2)">Renter-Occupied Housing</button> -->
-     <!-- <div> -->
-     
-    <!--   <svg id="bar-chart" width="1000" height="500"></svg> -->
-     <!-- </div> -->
+    
+    <h2>Tables and Charts</h3>
+
+    <p>The following table displays borough-level summaries of data regarding
+      occupied housing units in New York City. You can click on the column headers to sort the data.</p>
+      <br>
+      <br>
+      <div id="table"></div>
+      <br>
+      <br>
+      <p>Here are some bar charts made from the same data file.</p>
+      <div id="charts"></div>
+
   </main>
 </body>
 </html>

@@ -155,3 +155,16 @@ tr:hover {
 thead {
   font-weight: bold;
 }
+
+/* sorting table */
+table.sortable th {
+  cursor: pointer;
+}
+
+table.sortable th.ascending::after {
+  content: " ▲";
+}
+
+table.sortable th.descending::after {
+  content: " ▼";
+}

@@ -12,7 +12,6 @@ let state = {
   mapsvg: null,
   NYCtracts: null,
   plumbingData: null,
-  barData: null,
   currentView: null,
   zoomTransform: null, // Store the default transform
 };
@@ -26,13 +25,12 @@ function main() {
     // Census data, wrangled to be easier to read
     d3.csv("../data/CensusData.csv", d3.autoType),
 
-    // Separate file made of borough-level summary data, making it easier to render bar charts
-    d3.csv("../data/CensusDataBarChartSum.csv", d3.autoType),
+  
   ])
     .then(([NYCtracts, plumbingData, barData]) => {
       state.NYCtracts = NYCtracts;
       state.plumbingData = plumbingData;
-      state.barData = barData;
+
       drawMap();
     })
     .catch(error => {
@@ -61,8 +59,8 @@ function TractMouseOver(event, tractData) {
   // Update tooltip content
   tooltip.html(`
     <strong>Census Tract:</strong> ${tractData.properties.CDTA2020} - ${tractData.properties.CDTANAME}<br>
-    <strong>Occupied Units (Owner / Renter):</strong> ${tractData.properties.Total_Owner} / ${tractData.properties.Total_Renter}<br>
-    <strong>Percentage (Owner / Renter):</strong> ${ownerPercentage}% / ${renterPercentage}%<br>
+    <strong>Owner Occupied Units:</strong> ${tractData.properties.Total_Owner} (${ownerPercentage}%)<br>
+    <strong>Renter Occupied Units:</strong> ${tractData.properties.Total_Renter} (${renterPercentage}%)<br>
     <strong>No plumbing (Owner / Renter):</strong> ${tractData.properties.Owner_no_plumbing} / ${tractData.properties.Renter_no_plumbing}<br>
     <strong>Percentage without plumbing:</strong> ${percentageWithoutPlumbing}% 
   `);

@@ -1,3 +1,4 @@
+/* custom styling for text */
 body {
   display: flex;
   flex-direction: column;
@@ -7,6 +8,31 @@ body {
   font-size: 16px;
   padding: 1em;
 }
+
+/* navbar styling */
+.navbar {
+  display: inline-block;
+  list-style-type: none;
+  padding: 0;
+}
+li.navtab {
+  font-family: "Tahoma";
+  float: left;
+  font-weight: bold;
+}
+li.navtab a {
+  background-color: #eee;
+  color: #333;
+  font-size: 1.2rem;
+  padding: 12px 24px;
+  text-decoration: none;
+}
+li.navtab :hover { background-color: #ddd; }
+li.navtab.selected a {
+  background-color: #11f;
+  color: white;
+}
+li.navtab.selected :hover { background-color: #35f; }
 
 h1 {
   font-size: 3em;
@@ -22,9 +48,23 @@ p {
   font-size: 1em;
 }
 
+/* custom styling for tooltip */
 #tooltip {
   display: block;
   height: max-content;
+}
+
+.tooltip {
+  position: absolute;
+  text-align: center;
+  width: auto;
+  height: auto;
+  padding: 5px;
+  font: 10px sans-serif;
+  background: rgb(76, 84, 93);
+  border: 1px;
+  border-radius: 10px;
+  pointer-events: none;
 }
 
 path.state {
@@ -69,21 +109,49 @@ path.state {
   display: none;
 }
 
+/* Map styles */
 #map {
   width: 100%;
   height: 90vh; /* Adjust this value as needed */
   margin: 0 auto; /* Center the map if needed */
 }
 
-.tooltip {
-  position: absolute;
-  text-align: center;
-  width: auto;
-  height: auto;
-  padding: 5px;
-  font: 10px sans-serif;
-  background: rgb(76, 84, 93);
-  border: 1px;
-  border-radius: 10px;
-  pointer-events: none;
+
+
+/* Style for the table */
+table {
+  border-collapse: collapse;
+  width: 50%;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+/* Style for table headers */
+th {
+  background-color: #f2f2f2;
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Style for table data cells */
+td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Additional styles for even rows */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Style for hover effect */
+tr:hover {
+  background-color: #e0e0e0;
+}
+
+/* Style for the table header */
+thead {
+  font-weight: bold;
 }

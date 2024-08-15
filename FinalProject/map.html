@@ -5,10 +5,9 @@
   "HTML Tidy for HTML5 for Linux version 5.6.0">
   <meta charset="utf-8">
   <title>Final Project - Interactive Data Visualization</title>
-  <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="./map.css">
-  <script src="javascript/d3.min.js"></script>
-  <script src="javascript/drawMap.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="../lib/d3.min.js"></script>
+  <script src="drawMap.js"></script>
 </head>
 <body>
   <!-- top matter -->
@@ -36,26 +35,17 @@
   <main>
     <h2 class="section-title">Map</h2>
     <p>The following map allows you to explore a visual representation of characteristics 
-      of occupied housing units within New York City. It draws from Census data, organized by 
-      tract, that indicates if an occupied building has adequate or inadequate plumbing. As 
-      you scroll, it will display counts of housing units as well as counts of units marked 
+      of occupied housing units within New York City, focusing on whether these units have adequate plumbing. 
+      It draws from US Census Bureau data, organized by tract, that indicates if an occupied building has adequate
+       or inadequate plumbing. As you scroll, it will display counts of housing units as well as counts of units marked 
       with inadquate plumbing.</p>
     <br>
     <br>
     <br>
-  </main><svg class="centered" id="map"></svg>
-<style>
-/* https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl */
-p, dt { font-weight: bold; }
-dl, dd { font-size: 0.9rem; }
-dd { margin-bottom: 1em; }
-</style>
-<h3>Tract Info</h3>
-    <dl id="tract-info">
-        <dt>Census Tract</dt><dd id="CDTA2020"></dd>
-        <dt>Occupied Units (Owner / Renter)</dt><dd id="owner-to-renter"></dd>
-        <dt>No plumbing (Owner / Renter)</dt><dd id="no-plumbing"></dd>
-    </dl>
+  </main><svg class="centered" id="map" style="#map"></svg>
+
+<button id="reset-btn" style="margin: 10px;">Reset Map</button>
+<svg id="map"></svg>
 
   <div id="tooltip" style=
   "position: absolute; display: none; background-color: white; padding: 5px; border: 1px solid black;">

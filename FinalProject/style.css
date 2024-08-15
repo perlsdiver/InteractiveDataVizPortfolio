@@ -24,7 +24,7 @@ p {
 
 #tooltip {
   display: block;
-  height: 50px;
+  height: max-content;
 }
 
 path.state {
@@ -69,15 +69,21 @@ path.state {
   display: none;
 }
 
+#map {
+  width: 100%;
+  height: 90vh; /* Adjust this value as needed */
+  margin: 0 auto; /* Center the map if needed */
+}
+
 .tooltip {
   position: absolute;
   text-align: center;
   width: auto;
   height: auto;
   padding: 5px;
-  font: 12px sans-serif;
-  background: lightsteelblue;
-  border: 0px;
-  border-radius: 8px;
+  font: 10px sans-serif;
+  background: rgb(76, 84, 93);
+  border: 1px;
+  border-radius: 10px;
   pointer-events: none;
 }

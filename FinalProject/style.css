@@ -168,3 +168,17 @@ table.sortable th.ascending::after {
 table.sortable th.descending::after {
   content: " ▼";
 }
+
+/* styles.css */
+.data-view {
+  margin: 5px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+}
+
+.data-view:hover {
+  background-color: #ddd;
+}

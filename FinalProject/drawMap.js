@@ -149,13 +149,20 @@ function drawMap() {
   mapsvg.call(zoom);
   state.zoomTransform = d3.zoomIdentity; // Store the default zoom transform
 
-  // Add a framing border around the map
-  mapsvg.append("rect")
-    .attr("width", width)
-    .attr("height", height)
-    .attr("stroke", "gray") 
-    .attr("stroke-width", "5px") 
-    .attr("fill", "none");
+// Calculate the adjusted width and height
+const adjustedWidth = width - 5;  // Subtract stroke-width from width
+const adjustedHeight = height - 5; // Subtract stroke-width from height
+
+// Add a framing border around the map
+mapsvg.append("rect")
+  .attr("width", adjustedWidth)
+  .attr("height", adjustedHeight)
+  .attr("x", 2.5) // Offset by half the stroke width to ensure the border is inside the SVG
+  .attr("y", 2.5) // Offset by half the stroke width to ensure the border is inside the SVG
+  .attr("stroke", "gray")
+  .attr("stroke-width", "5px")
+  .attr("fill", "none");
+
 
   // Add the color density scale (legend)
   addColorScaleLegend(mapsvg, colorScale, width, height);
@@ -171,10 +178,23 @@ function drawMap() {
 /// Function to add a color scale legend
 function addColorScaleLegend(svg, colorScale, width, height) {
   const legendWidth = 300;
-  const legendHeight = 20;
+  const legendHeight = 100;
+  const padding = 10;
 
   const legendGroup = svg.append("g")
-    .attr("transform", `translate(${width - legendWidth - 50}, ${height - legendHeight - 50})`);
+    .attr("transform", `translate(${width - legendWidth - 60}, ${height - legendHeight - 80})`);
+
+  // Add a background box to contain the legend
+  legendGroup.append("rect")
+    .attr("width", legendWidth + padding * 2)
+    .attr("height", legendHeight * 2 + padding * 2)
+    .attr("x", -padding)
+    .attr("y", -padding)
+    .attr("fill", "#f9f9f9")  // Light background color
+    .attr("stroke", "#ccc")   // Border color
+    .attr("stroke-width", 1)
+    .attr("rx", 8)            // Rounded corners
+    .attr("ry", 8);
 
   const legendLabels = ["No Issues", "1-5 Issues", "6-15 Issues", "16-30 Issues", "31+ Issues", "No Occupied Units (Hatched)"];
   const legendColors = ["#ffe", "#ffd700", "#ff8c00", "#ff4500", "#f00", "url(#diagonalHatch)"];
@@ -184,26 +204,25 @@ function addColorScaleLegend(svg, colorScale, width, height) {
     .range([0, legendWidth])
     .padding(0.1);
 
-  legendGroup.selectAll("rect")
+  legendGroup.selectAll("rect.color-legend")
     .data(legendColors)
     .enter().append("rect")
+    .attr("class", "color-legend")
     .attr("x", (d, i) => i * legendWidth / legendColors.length)
     .attr("y", 0)
     .attr("width", legendWidth / legendColors.length)
     .attr("height", legendHeight)
     .attr("fill", d => d);
 
-    legendGroup.selectAll("text")
+  legendGroup.selectAll("text.legend-label")
     .data(legendLabels)
     .enter().append("text")
+    .attr("class", "legend-label")
     .attr("x", (d, i) => i * legendWidth / legendLabels.length + (legendWidth / legendLabels.length) / 2)
     .attr("y", legendHeight + 15)
     .attr("text-anchor", "middle")
+    .attr("font-size", "12px") // Adjust font size
+    .attr("transform", (d, i) => `rotate(-90, ${i * legendWidth / legendLabels.length + (legendWidth / legendLabels.length) / 2}, ${legendHeight + 5})`)
+    .attr("fill", "#333")       // Darker text color for readability
     .text(d => d);
-
-  legendGroup.append("g")
-    .call(d3.axisBottom(legendScale)
-      .tickSize(0)
-      .tickFormat((d, i) => legendLabels[i]))
-    .select(".domain").remove(); // Remove axis line
 }

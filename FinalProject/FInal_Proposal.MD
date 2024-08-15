@@ -17,18 +17,16 @@ An interactive map, with a dropdown menu to switch between owner-occupied and re
 
 US Census Bureau, American Community Survey, Selected Housing Characteristics, 5-year estimate table
 
-**Architecture**
 
-
- 
 **Figure 1: Sketches 1 and 2**
 
-
+![Sketches 1 and 2](/FinalProject/media/sketches-1.jpg)
 
 **Figure 2: Sketches 3 and 4**
+![Sketches 3 and 4](/FinalProject/media/sketches-2.jpg)
 
 **Figure 3: Sketches 5 and 6**
-
+![Sketches 5 and 6](/FinalProject/media/sketches-3.jpg)
 **Model**
 
  
@@ -42,3 +40,5 @@ I will replicate some of the functionality of the official Census map, with impr
 -	Stronger borders
 -	Adding tooltip to reveal additional, potentially correlating data
 -	Recoding variable groupings for more nuance at smaller counts
+
+__(Note: I was unable to achieve these goals)__

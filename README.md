@@ -2,21 +2,33 @@
 Portfolio for Interactive Data Visualization (Spring 2023)
 Ian G. Williams
 
-This portfolio has has three components
+Welcome to my portfolio! It has has four components
 
-1. Updated tutorial
-2. Compiled final
-3. Reflection on the process
+1. Stable links to all tutorials.
+2. Abstract for updated tutorial
+2. Abstract for final project
+3. Reflection on the process and the course
 
-**Abstract for updated tutorial**
+##### **1. Links to projects**
+| Tutorial | Link To Deployment | Link To Code |
+|--------- |---------------- |  -----|
+|Tutorial 1| | |
+|Tutorial 2| | |
+|Tutorial 3| | |
+|Tutorial 4| | |
+|Tutorial 5| | |
+|Final Project | | 
+
+
+##### **2. Abstract for updated tutorial**
 
 This visualization demonstrates how to make an area chart with a small data set, with a tooltip. It depicts annual population estimates of persons experiencing homelesssness in the United States from 2007-2022. I pulled the data from [Statista](https://www.statista.com/topics/5139/homelessness-in-the-us/#editorsPicks).
 
-**Abstract for final project**
+##### **3. Abstract for final project**
 
 This project takes a sample of the US Census Bureau's 2020 American Community Survey data and renders an interactive map of New York City. Focusing on housing characteristics, it introduces the viewer to the work of the Plumbing Poverty Project, which focuses on the often invisible problem of households that lack fresh water access and functional indoor plumbing. It then offers the viewer an opportunity to explore Census tract-level estimates of proportions of inadequate plumbing in occupied buildings, visually depicted as a choropleth map, focused on New York City. The viewer is invited to submit a reflection on the observations and experiences through an embedded Google form.
 
-##### **3. Reflection**
+##### **4. Reflection**
 
 Regarding the assignment objectives, here is where I feel I stand:
 
@@ -64,6 +76,11 @@ In my final version, I also added a very simple interactive table that displayed
 Class feedback in the initial presentation helped me to imagine how I might co-present demographic data to offer a fuller picture of what the counts of inadequate plumbing when. Demographic analysis was less foregrounded in my approach, although I imagined how it might make for an interesting intersection between the built environment and population characteristics. I also received suggestions about adding a tooltip and some other interactive features I had not considered.
 
 Another part of our peer demonstrations was getting to see my classmates' design processes, including their iterations, their code snippets, and their mock-ups. It helped me to imagine different ways of putting together my project, as well as how users might interact with it. Offering feedback on theirs, as well, helped me feel a little more confident - that my ability to contribute was not limited to my techinical skill level. I greatly enjoyed these feedback processes and being a part of that learning community.
+
+**The Roads Not Taken**
+There are several directions this project could have gone, or directions it could go. A first modification would be to add demographic data about each Census tract, as this current version solely contains data on housing characteristics. Other directions to take would be layering in multiple sources of data, including city-level administative data available on NYC Open Data. It would be interesting to add layers of FDNY fire houses, 311 calls about heat or hot water, 311 calls about loose fire hydrants, and a layer of data about public bathrooms and pools nearby. Other data to analyze in this map could include evictions, property ownership patterns (in particular to see if any owners of renter-occupied buildings that lack plubming are owned by anyone on the NYC Public Advocate's worst landlords list).
+
+It would also be interesting to display a map that soley focused on Census tracts that contain higher densities of occupied buildings that lack working plumbing.
 
 **Sketches**
 

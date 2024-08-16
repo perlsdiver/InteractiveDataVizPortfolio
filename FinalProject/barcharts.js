@@ -50,7 +50,7 @@ function drawBarChart(view, sortByValue = false) {
   const filteredData = state.barData
   .filter(d => d['Row Labels'] !== 'Grand Total')  // Exclude the "Grand Total" row
   .map(d => ({
-    County: d['Row Labels'].trim(),  // Ensure you access the 'Row Labels' column correctly
+    County: d['Row Labels'].trim(),  // Ensure accessing the 'Row Labels' column correctly
     total: d[view] || 0 // Fallback to 0 if the value is undefined
   }));
 

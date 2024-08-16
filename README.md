@@ -110,6 +110,9 @@ Tutorial 2.3
 ![Screenshot of table](./media/final_screenshot_table.png)
 Final Project: Table
 
+![Screenshot of barchart](./media/final_screenshot_barchart.png)
+Final Project: Bar Chart
+
 ![Screenshot of map](./media/final_screenshot_map.png)
 Final Project: Map
 

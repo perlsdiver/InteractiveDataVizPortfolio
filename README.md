@@ -18,7 +18,7 @@ Welcome to my portfolio! It has has four components
 | Section 2 | Tutorial 1 | https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/2_1_quantities_and_amounts/index.html | https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/2_1_quantities_and_amounts |
 | Section 2 | Tutorial 2 | https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/2_2_distributions/index.html | https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/2_2_distributions |
 | Section 2 | Tutorial 3 | https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/2_3_time_series/index.html | https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/2_3_time_series | 
-| Section 2 | Tutorial 4 | Geographic | https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/2_4_geographic/index.html | https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/2_4_geographic | 
+| Section 2 | Tutorial 4 | https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/2_4_geographic/index.html | https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/2_4_geographic | 
 | Final | Final Project | https://perlsdiver.github.io/InteractiveDataVizPortfolio/FinalProject/index.html | https://github.com/perlsdiver/InteractiveDataVizPortfolio/tree/main/FinalProject | 
 
 

@@ -13,28 +13,33 @@ Welcome to my portfolio! It has has four components
 | Section | Tutorial | Link To Deployment | Link To Code |
 
 | -------------- |--------- |---------------- |  -----|
-| 1 | 1 | https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/1_1_getting_started/index.html | https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/1_1_getting_started |
-| 1 | 2 | https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/1_2_basic_html/index.html | https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/1_2_basic_html |
-| 1 | 3 | https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/1_3_intro_to_js/index.html | https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/1_3_intro_to_js |
-| 2 | 1 | https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/2_1_quantities_and_amounts/index.html | https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/2_1_quantities_and_amounts |
-| 2 | 2 | https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/2_2_distributions/index.html | https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/2_2_distributions |
-| 2 | 3 | https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/2_3_time_series/index.html | https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/2_3_time_series | 
-| 2 | 4 | https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/2_4_geographic/index.html | https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/2_4_geographic | 
-| Final | Final Project | https://perlsdiver.github.io/InteractiveDataVizPortfolio/FinalProject/index.html | https://github.com/perlsdiver/InteractiveDataVizPortfolio/tree/main/FinalProject | 
+| 1 | 1 | [Deployment](https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/1_1_getting_started/index.html) | [Code](https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/1_1_getting_started) |
+| 1 | 2 | [Deployment](https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/1_2_basic_html/index.html) | [Code](https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/1_2_basic_html) |
+| 1 | 3 | [Deployment](https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/1_3_intro_to_js/index.html) | [Code](https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/1_3_intro_to_js) |
+| 2 | 1 | [Deployment](https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/2_1_quantities_and_amounts/index.html) | [Code](https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/2_1_quantities_and_amounts) |
+| 2 | 2 | [Deployment](https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/2_2_distributions/index.html) | [Code](https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/2_2_distributions) |
+| 2 | 3 | [Deployment](https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/2_3_time_series/index.html) | [Code](https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/2_3_time_series) |
+| 2 | 3 (Upgrade) |
+[Deployment]https://perlsdiver.github.io/InteractiveDataVizPortfolio/TutorialUpgrade/2_3_time_series/index.html | [Code](https://github.com/perlsdiver/InteractiveDataVizPortfolio/tree/main/TutorialUpgrade/2_3_time_series) |
+| 2 | 4 | [Deployment](https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/2_4_geographic/index.html) | [Code](https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/2_4_geographic) | 
+| Final | Final Project | [Deployment](https://perlsdiver.github.io/InteractiveDataVizPortfolio/FinalProject/index.html) | [Code](https://github.com/perlsdiver/InteractiveDataVizPortfolio/tree/main/FinalProject) | 
 
 
 ##### **2. Abstract for updated tutorial**
 
 Section 2, Tutorial 3: Time Series
 
-Code      https://github.com/perlsdiver/InteractiveDataVizPortfolio/tree/main/TutorialUpgrade/2_3_time_series
-Deployment  https://perlsdiver.github.io/InteractiveDataVizPortfolio/TutorialUpgrade/2_3_time_series/index.html
+![Screenshot of time series](./media/tutorial_2_3_screenshot.png)
 
 This visualization demonstrates how to make an area chart with a small data set, with a tooltip. It depicts annual population estimates of persons experiencing homelesssness in the United States from 2007-2022. I pulled the data from [Statista](https://www.statista.com/topics/5139/homelessness-in-the-us/#editorsPicks).
 
 ##### **3. Abstract for final project**
 
-This project takes a sample of the US Census Bureau's 2020 American Community Survey data and renders an interactive map of New York City. Focusing on housing characteristics, it introduces the viewer to the work of the Plumbing Poverty Project, which focuses on the often invisible problem of households that lack fresh water access and functional indoor plumbing. It then offers the viewer an opportunity to explore Census tract-level estimates of proportions of inadequate plumbing in occupied buildings, visually depicted as a choropleth map, focused on New York City. The viewer is invited to submit a reflection on the observations and experiences through an embedded Google form.
+![Screenshot of table](./media/final_screenshot_table.png)
+
+![Screenshot of map](./media/final_screenshot_map.png)
+
+This project takes a sample of the US Census Bureau's 2020 American Community Survey data and renders an interactive map of New York City. Focusing on housing characteristics, it introduces the viewer to the work of the Plumbing Poverty Project, which focuses on the often invisible problem of households that lack fresh water access and functional indoor plumbing. It then offers the viewer an opportunity to explore Census tract-level estimates of proportions of inadequate plumbing in occupied buildings, visually depicted as a choropleth map, focused on New York City. The viewer is invited to submit a reflection on the observations and experiences through an embedded Google form. It was conceptualized as a pedagogical tool for use in a Master's level social work course focused on homelessness and social welfare policy in New York City.
 
 ##### **4. Reflection**
 
@@ -53,7 +58,7 @@ I saw [this meme](https://www.facebook.com/photo/?fbid=139588109105085&set=gm.10
 
 **Challenges**
 
-This class was incredibly challenging for me, the greatest difficulty being maintaining enough of a working grasp of JavaScript syntax to make my d3.js code work. The second major challenge was tolerating the frustration I experience when programming and debugging; I have a pretty bad case of coding anxiety. Over the semester I learned a significant quantity of new information and was exposed to ways of thinking that were far outside of my discipline or learning scope.  I got to meet and connect with students from two very interesting Master's programs at The Graduate Center, and I got to learn from our instructor's vast experience as a professional information designer and visualization expert. I was also exposed to several creative practices and ideational tools that I was unaware of. So in that regard, this class was a 'success,' but I feel that where I currently stand, I nonetheless struggled to grasp some fundamentals and properly execute the code for a long time. That remains a little deflating.
+This class was incredibly challenging for me, the greatest difficulty being maintaining enough of a working grasp of JavaScript syntax to make my d3.js code work. Often times, I felt completely overwhelmed by the sheer amount of code and the logic of the programming language. Which leads to the second major challenge was tolerating the frustration I experience when programming and debugging; I have a pretty bad case of coding anxiety. Over the semester I learned a significant quantity of new information and was exposed to ways of thinking that were far outside of my discipline or learning scope.  I got to meet and connect with students from two very interesting Master's programs at The Graduate Center, and I got to learn from our instructor's vast experience as a professional information designer and visualization expert. I was also exposed to several creative practices and ideational tools that I was unaware of. So in that regard, this class was a 'success,' but I feel that where I currently stand, I nonetheless struggled to grasp some fundamentals and properly execute the code for a long time. That remains a little deflating.
 
 In retrospect, I would have benefitted from taking some time to learn JavaScript fundamentals early on, or recruited additional support earlier on to help me stay on track. As a student in a Ph.D. program at The Graduate Center, I was on a waitlist for registration and notified of my eligiblity for the class while on my honeymoon - only a few days before I returned to NYC, right before the Spring semester. Prior to notification, I had mapped out an alternative course path for the semester. The opportunity to take this class and gain hands-on exposure to d3.js was hard to pass up, though perhaps my interest was more in learning about how d3 works and how it functions as a tool that people use (and in that regard, perhaps I was paying more attention, unconsciously, to the class discussion and dynamics than the technical instruction?). So my output reflected this rough starting point, lack of familiarity with the foundations, and a very busy semester with many time commitments and a few difficult life events that impacted my studies. This continued as the project lingered on.
 
@@ -83,7 +88,7 @@ In my final version, I also added a very simple interactive table that displayed
 
 **Data wrangling**
 
-From the initial data set, I combined the geoJSON file for NYC's Census boundaries with the ACS data set. I created a separate file that contained summary data organized for bar charts. It took me some time to figure out how to make the geoJSON file and shape data work. Initially I used R to explore and process the data set, as I was more familiar with data analysis using that language than JavaScript.
+From the initial data set, I combined betaNYC's geoJSON shape file for NYC's Census boundaries with the ACS data set. I created a separate file that contained summary data organized for bar charts. It took me some time to figure out how to make the geoJSON file and shape data work. Initially I used R to explore and process the data set, as I was more familiar with data analysis using that language than JavaScript.
 
 **Class feedback**
 
@@ -99,7 +104,6 @@ Other directions to take would be layering in multiple sources of data, includin
 It would also be interesting to display a map that soley focused on Census tracts that contain higher densities of occupied buildings that lack working plumbing.
 
 **Sketches**
-
 These are sketches from exercises conducted in class, which helped me to imagine my visual choices. They are also included in my prospectus.
 
 ![Sketches 1 and 2](/FinalProject/media/sketches-1.jpg)

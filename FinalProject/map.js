@@ -97,8 +97,8 @@ function drawMap() {
     .attr("height", 4)
     .append("path")
     .attr("d", "M-1,1 l2,-2 M0,4 l4,-4 M3,5 l2,-2")
-    .attr("stroke", "black")
-    .attr("stroke-width", 1);
+    .attr("stroke", "gray")
+    .attr("stroke-width", .5);
 
   // Define a clipPath to contain the map within the border
   // TODO: fix this... still not working
@@ -152,19 +152,20 @@ function drawMap() {
   mapsvg.call(zoom);
   state.zoomTransform = d3.zoomIdentity; // Store the default zoom transform
 
-// Calculate the adjusted width and height
+// Calculate the adjusted width and height (for framing border)
 const adjustedWidth = width - 1;  // Subtract stroke-width from width
 const adjustedHeight = height - 1; // Subtract stroke-width from height
 
 // Add a framing border around the map
-mapsvg.append("rect")
-  .attr("width", adjustedWidth)
-  .attr("height", adjustedHeight)
-  .attr("x", 2.5) // Offset by half the stroke width to ensure the border is inside the SVG
-  .attr("y", 2.5) // Offset by half the stroke width to ensure the border is inside the SVG
-  .attr("stroke", "gray")
-  .attr("stroke-width", "1px")
-  .attr("fill", "none");
+//  Not fitting the entire map, and I couldn't fix it, so commented out
+// mapsvg.append("rect")
+//   .attr("width", adjustedWidth)
+//   .attr("height", adjustedHeight)
+//   .attr("x", 2.5) // Offset by half the stroke width to ensure the border is inside the SVG
+//   .attr("y", 2.5) // Offset by half the stroke width to ensure the border is inside the SVG
+//   .attr("stroke", "gray")
+//   .attr("stroke-width", "1px")
+//   .attr("fill", "none");
 
 
   // Add the color density scale (legend)
@@ -173,7 +174,7 @@ mapsvg.append("rect")
   // Add event listener for the reset button
   d3.select("#reset-btn").on("click", () => {
     mapsvg.transition()
-      .duration(750)
+      .duration(1000) // slowed down for cool effect
       .call(zoom.transform, d3.zoomIdentity); // Reset the zoom to the default transform
   });
 }
@@ -210,7 +211,7 @@ function addColorScaleLegend(svg, colorScale, width, height) {
  .attr("fill", "#333")
  .text(legendTitle);
 
-  const legendLabels = ["No Plumbing Issues", "1-5 Plumbing Issues", "6-15 Plumbing Issues", "16-30 Plumbing Issues", "31+ Plumbing Issues", "No Occupied Units (Hatched)"];
+  const legendLabels = ["No Plumbing Issues", "1-5 Plumbing Issues", "6-15 Plumbing Issues", "16-30 Plumbing Issues", "31+ Plumbing Issues", "N/A - No Occupied Units"];
   const legendColors = ["#ffe", "#ffd700", "#ff8c00", "#ff4500", "#f00", "url(#diagonalHatch)"];
 
   const legendScale = d3.scaleBand()

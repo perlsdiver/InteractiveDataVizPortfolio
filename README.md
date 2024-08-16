@@ -19,8 +19,7 @@ Welcome to my portfolio! It has has four components
 | 2 | 1 | [Deployment](https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/2_1_quantities_and_amounts/index.html) | [Code](https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/2_1_quantities_and_amounts) |
 | 2 | 2 | [Deployment](https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/2_2_distributions/index.html) | [Code](https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/2_2_distributions) |
 | 2 | 3 | [Deployment](https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/2_3_time_series/index.html) | [Code](https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/2_3_time_series) |
-| 2 | 3 (Upgrade) |
-[Deployment]https://perlsdiver.github.io/InteractiveDataVizPortfolio/TutorialUpgrade/2_3_time_series/index.html | [Code](https://github.com/perlsdiver/InteractiveDataVizPortfolio/tree/main/TutorialUpgrade/2_3_time_series) |
+| 2 | 3 (Upgrade) | [Deployment]https://perlsdiver.github.io/InteractiveDataVizPortfolio/TutorialUpgrade/2_3_time_series/index.html | [Code](https://github.com/perlsdiver/InteractiveDataVizPortfolio/tree/main/TutorialUpgrade/2_3_time_series) |
 | 2 | 4 | [Deployment](https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/2_4_geographic/index.html) | [Code](https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/2_4_geographic) | 
 | Final | Final Project | [Deployment](https://perlsdiver.github.io/InteractiveDataVizPortfolio/FinalProject/index.html) | [Code](https://github.com/perlsdiver/InteractiveDataVizPortfolio/tree/main/FinalProject) | 
 

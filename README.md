@@ -11,6 +11,7 @@ Welcome to my portfolio! It has has four components
 
 ##### **1. Links to projects**
 | Section | Tutorial | Link To Deployment | Link To Code |
+
 | -------------- |--------- |---------------- |  -----|
 | 1 | 1 | https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/1_1_getting_started/index.html | https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/1_1_getting_started |
 | 1 | 2 | https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/1_2_basic_html/index.html | https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/1_2_basic_html |
@@ -25,6 +26,9 @@ Welcome to my portfolio! It has has four components
 ##### **2. Abstract for updated tutorial**
 
 Section 2, Tutorial 3: Time Series
+
+Code      https://github.com/perlsdiver/InteractiveDataVizPortfolio/tree/main/TutorialUpgrade/2_3_time_series
+Deployment  https://perlsdiver.github.io/InteractiveDataVizPortfolio/TutorialUpgrade/2_3_time_series/index.html
 
 This visualization demonstrates how to make an area chart with a small data set, with a tooltip. It depicts annual population estimates of persons experiencing homelesssness in the United States from 2007-2022. I pulled the data from [Statista](https://www.statista.com/topics/5139/homelessness-in-the-us/#editorsPicks).
 
@@ -53,7 +57,7 @@ This class was incredibly challenging for me, the greatest difficulty being main
 
 In retrospect, I would have benefitted from taking some time to learn JavaScript fundamentals early on, or recruited additional support earlier on to help me stay on track. As a student in a Ph.D. program at The Graduate Center, I was on a waitlist for registration and notified of my eligiblity for the class while on my honeymoon - only a few days before I returned to NYC, right before the Spring semester. Prior to notification, I had mapped out an alternative course path for the semester. The opportunity to take this class and gain hands-on exposure to d3.js was hard to pass up, though perhaps my interest was more in learning about how d3 works and how it functions as a tool that people use (and in that regard, perhaps I was paying more attention, unconsciously, to the class discussion and dynamics than the technical instruction?). So my output reflected this rough starting point, lack of familiarity with the foundations, and a very busy semester with many time commitments and a few difficult life events that impacted my studies. This continued as the project lingered on.
 
-Working on it in my own timeline after the end of the semester, without peer support or resources, was also challenging for me. Unlike Master's students, life as a doctoral student does not have the same time pressure to graduate and finish everything quickly. Doctoral education takes years, and many projects linger and continue onward, often moving at a sluggish pace. So it becomes normal for things to sit on the back burner, competing with too many time demands. Incomplete projects can feel a bit like cars in a garage, or in a yard, propped on cinder blocks, waiting to be finished or picked up at some point. Programming, as a technical skillset, requires a certain degree of familiarity with the tools and parameters to feel confident in doing the work. My skills got rusty, even as I took a basic JavaScript class in Fall 2023 that provided some remedial skills (some of which I hoped to use more in this project, but so it goes).
+Working on it in my own timeline after the end of the semester, without peer support or resources, was also challenging for me. Unlike Master's students, life as a doctoral student does not have the same time pressure to graduate and finish everything quickly. Doctoral education takes years, and many projects linger and continue onward, often moving at a sluggish pace. So it becomes normal for things to sit on the back burner, competing with too many time demands. Incomplete projects can feel a bit like cars in a garage, or in a yard, propped on cinder blocks, waiting to be finished or picked up at some point. Programming, as a technical skillset, requires a certain degree of familiarity with the tools and parameters to feel confident in doing the work. My skills got rusty, even as I took a basic JavaScript class in Fall 2023 that provided some remedial skills and introduced me to the Leaflet library (which I hoped to use in this project, but so it goes).
 
 **Data selection and design choices**
 

@@ -101,6 +101,7 @@ function drawMap() {
     .attr("stroke-width", 1);
 
   // Define a clipPath to contain the map within the border
+  // TODO: fix this... still not working
   mapsvg.append("defs").append("clipPath")
     .attr("id", "map-clip")
     .append("rect")
@@ -120,6 +121,7 @@ function drawMap() {
       +d.properties.Owner_no_plumbing + +d.properties.Renter_no_plumbing)])
     .range(["#ffe", "#ffd700", "#ff8c00", "#ff4500", "#f00", "#d3d3d3"]); // Add new colors and patterns
 
+ // rendering the map   
   tractGroup.selectAll("path")
     .data(state.NYCtracts.features)
     .enter()
@@ -127,6 +129,7 @@ function drawMap() {
     .attr("d", pathGenerator)
     .attr("id", tract => `tract-id-${tract.id}`)
     .attr("stroke", "black")
+    .attr("stroke-width", 0.5)
     .attr("fill", data => {
       const totalUnits = +data.properties.Total_Owner + +data.properties.Total_Renter;
       if (totalUnits === 0) {
@@ -150,8 +153,8 @@ function drawMap() {
   state.zoomTransform = d3.zoomIdentity; // Store the default zoom transform
 
 // Calculate the adjusted width and height
-const adjustedWidth = width - 5;  // Subtract stroke-width from width
-const adjustedHeight = height - 5; // Subtract stroke-width from height
+const adjustedWidth = width - 1;  // Subtract stroke-width from width
+const adjustedHeight = height - 1; // Subtract stroke-width from height
 
 // Add a framing border around the map
 mapsvg.append("rect")
@@ -160,7 +163,7 @@ mapsvg.append("rect")
   .attr("x", 2.5) // Offset by half the stroke width to ensure the border is inside the SVG
   .attr("y", 2.5) // Offset by half the stroke width to ensure the border is inside the SVG
   .attr("stroke", "gray")
-  .attr("stroke-width", "5px")
+  .attr("stroke-width", "1px")
   .attr("fill", "none");
 
 
@@ -179,7 +182,8 @@ mapsvg.append("rect")
 function addColorScaleLegend(svg, colorScale, width, height) {
   const legendWidth = 300;
   const legendHeight = 100;
-  const padding = 10;
+  const padding = 25; // made padding larger for title
+  const legendTitle = "Legend"; // Title for the legend
 
   const legendGroup = svg.append("g")
     .attr("transform", `translate(${width - legendWidth - 60}, ${height - legendHeight - 80})`);
@@ -187,16 +191,26 @@ function addColorScaleLegend(svg, colorScale, width, height) {
   // Add a background box to contain the legend
   legendGroup.append("rect")
     .attr("width", legendWidth + padding * 2)
-    .attr("height", legendHeight * 2 + padding * 2)
+    .attr("height", legendHeight * 2 + padding * 4)
     .attr("x", -padding)
     .attr("y", -padding)
-    .attr("fill", "#f9f9f9")  // Light background color
+    .attr("fill", "#d3d3d3")  // Light gray background color
     .attr("stroke", "#ccc")   // Border color
     .attr("stroke-width", 1)
     .attr("rx", 8)            // Rounded corners
     .attr("ry", 8);
 
-  const legendLabels = ["No Issues", "1-5 Issues", "6-15 Issues", "16-30 Issues", "31+ Issues", "No Occupied Units (Hatched)"];
+ // Add the title
+ legendGroup.append("text")
+ .attr("x", legendWidth / 2)
+ .attr("y", -padding / 2)
+ .attr("text-anchor", "middle")
+ .attr("font-size", "13px") // Title font size
+ .attr("font-weight", "bold")
+ .attr("fill", "#333")
+ .text(legendTitle);
+
+  const legendLabels = ["No Plumbing Issues", "1-5 Plumbing Issues", "6-15 Plumbing Issues", "16-30 Plumbing Issues", "31+ Plumbing Issues", "No Occupied Units (Hatched)"];
   const legendColors = ["#ffe", "#ffd700", "#ff8c00", "#ff4500", "#f00", "url(#diagonalHatch)"];
 
   const legendScale = d3.scaleBand()
@@ -211,7 +225,7 @@ function addColorScaleLegend(svg, colorScale, width, height) {
     .attr("x", (d, i) => i * legendWidth / legendColors.length)
     .attr("y", 0)
     .attr("width", legendWidth / legendColors.length)
-    .attr("height", legendHeight)
+    .attr("height", legendHeight * 2)
     .attr("fill", d => d);
 
   legendGroup.selectAll("text.legend-label")
@@ -221,8 +235,10 @@ function addColorScaleLegend(svg, colorScale, width, height) {
     .attr("x", (d, i) => i * legendWidth / legendLabels.length + (legendWidth / legendLabels.length) / 2)
     .attr("y", legendHeight + 15)
     .attr("text-anchor", "middle")
-    .attr("font-size", "12px") // Adjust font size
-    .attr("transform", (d, i) => `rotate(-90, ${i * legendWidth / legendLabels.length + (legendWidth / legendLabels.length) / 2}, ${legendHeight + 5})`)
+    .attr("font-size", "11px") // Adjust font size
+    .attr("font-weight", "bold") // Bold font for readability
+    .attr("transform", (d, i) => 
+      `rotate(-90, ${i * legendWidth / legendLabels.length + (legendWidth / legendLabels.length) / 2}, ${legendHeight + 5})`) // vertical text in legend
     .attr("fill", "#333")       // Darker text color for readability
     .text(d => d);
 }

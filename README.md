@@ -28,21 +28,17 @@ Welcome to my portfolio! It has has four components
 
 Section 2, Tutorial 3: Time Series
 
-![Screenshot of time series](./media/tutorial_2_3_screenshot.png)
-
 This visualization demonstrates how to make an area chart with a small data set, with a tooltip. It depicts annual population estimates of persons experiencing homelesssness in the United States from 2007-2022. I pulled the data from [Statista](https://www.statista.com/topics/5139/homelessness-in-the-us/#editorsPicks).
 
 ##### **3. Abstract for final project**
 
-![Screenshot of table](./media/final_screenshot_table.png)
-
-![Screenshot of map](./media/final_screenshot_map.png)
-
 This project takes a sample of the US Census Bureau's 2020 American Community Survey data and renders an interactive map of New York City. Focusing on housing characteristics, it introduces the viewer to the work of the Plumbing Poverty Project, which focuses on the often invisible problem of households that lack fresh water access and functional indoor plumbing. It then offers the viewer an opportunity to explore Census tract-level estimates of proportions of inadequate plumbing in occupied buildings, visually depicted as a choropleth map, focused on New York City. The viewer is invited to submit a reflection on the observations and experiences through an embedded Google form. It was conceptualized as a pedagogical tool for use in a Master's level social work course focused on homelessness and social welfare policy in New York City.
+
+Read more in the [Prospectus](./FinalProject/Prospectus.MD) and [Final Proposal](./FinalProject/Final%20Project%20Proposal.pdf) here.
 
 ##### **4. Reflection**
 
-Regarding the assignment objectives, here is where I feel I stand:
+Regarding the assignment objective, all were acheived to varying degrees of success.
 
 - [x] Understand the basics of web development, using HTML, JS, and CSS.
 - [x] Build custom data-driven graphics using d3.js.
@@ -57,15 +53,15 @@ I saw [this meme](https://www.facebook.com/photo/?fbid=139588109105085&set=gm.10
 
 **Challenges**
 
-This class was incredibly challenging for me, the greatest difficulty being maintaining enough of a working grasp of JavaScript syntax to make my d3.js code work. Often times, I felt completely overwhelmed by the sheer amount of code and the logic of the programming language. Which leads to the second major challenge was tolerating the frustration I experience when programming and debugging; I have a pretty bad case of coding anxiety. Over the semester I learned a significant quantity of new information and was exposed to ways of thinking that were far outside of my discipline or learning scope.  I got to meet and connect with students from two very interesting Master's programs at The Graduate Center, and I got to learn from our instructor's vast experience as a professional information designer and visualization expert. I was also exposed to several creative practices and ideational tools that I was unaware of. So in that regard, this class was a 'success,' but I feel that where I currently stand, I nonetheless struggled to grasp some fundamentals and properly execute the code for a long time. That remains a little deflating.
+This class was incredibly challenging for me, the greatest difficulty being maintaining enough of a working grasp of JavaScript syntax to make my d3.js code work. Often times, I felt completely overwhelmed by the sheer amount of code and the logic of the programming language. Which leads to the second major challenge was tolerating the frustration I experience when programming and debugging; I have a pretty bad case of coding anxiety. Over the semester I learned a significant quantity of new information and was exposed to ways of thinking that were far outside of my discipline or learning scope.  I got to meet and connect with students from two very interesting Master's programs at The Graduate Center, and I got to learn from our instructor's vast experience as a professional information designer and visualization expert. I was also exposed to several creative practices and ideational tools that I was unaware of. So in that regard, this class was a 'success,' but I feel that I nonetheless struggled to grasp some fundamentals and properly execute the code for a long time. That remains a little deflating.
 
 In retrospect, I would have benefitted from taking some time to learn JavaScript fundamentals early on, or recruited additional support earlier on to help me stay on track. As a student in a Ph.D. program at The Graduate Center, I was on a waitlist for registration and notified of my eligiblity for the class while on my honeymoon - only a few days before I returned to NYC, right before the Spring semester. Prior to notification, I had mapped out an alternative course path for the semester. The opportunity to take this class and gain hands-on exposure to d3.js was hard to pass up, though perhaps my interest was more in learning about how d3 works and how it functions as a tool that people use (and in that regard, perhaps I was paying more attention, unconsciously, to the class discussion and dynamics than the technical instruction?). So my output reflected this rough starting point, lack of familiarity with the foundations, and a very busy semester with many time commitments and a few difficult life events that impacted my studies. This continued as the project lingered on.
 
-Working on it in my own timeline after the end of the semester, without peer support or resources, was also challenging for me. Unlike Master's students, life as a doctoral student does not have the same time pressure to graduate and finish everything quickly. Doctoral education takes years, and many projects linger and continue onward, often moving at a sluggish pace. So it becomes normal for things to sit on the back burner, competing with too many time demands. Incomplete projects can feel a bit like cars in a garage, or in a yard, propped on cinder blocks, waiting to be finished or picked up at some point. Programming, as a technical skillset, requires a certain degree of familiarity with the tools and parameters to feel confident in doing the work. My skills got rusty, even as I took a basic JavaScript class in Fall 2023 that provided some remedial skills and introduced me to the Leaflet library (which I hoped to use in this project, but so it goes).
+Working on it in my own timeline after the end of the semester, without peer support or resources, was also challenging. Unlike Master's students, life as a doctoral student does not have the same time pressure to graduate and finish everything quickly. Doctoral education takes many years, and many projects linger and continue on simultaneously, often moving at a sluggish pace. Doctoral student funding is precarious and insufficient, leading many doctoral students to over-leverage their time and find themselves burdened with too many committments. So it becomes normal for things to sit on the back burner, competing with too many time demands. Incomplete projects can feel a bit like cars in a garage, or in a yard, propped on cinder blocks, waiting to be finished or picked up at some point. Programming, as a technical skillset, requires a certain degree of familiarity with the tools and parameters to feel confident in doing the work. My skills got rusty, even as I took a basic JavaScript class in Fall 2023 that provided some remedial skills and introduced me to the Leaflet library (which I hoped to use in this project, but so it goes).
 
 **Data selection and design choices**
 
-For my project, I decided to stay with the assigned data set - the US Census Bureau's 2020 American Community Survey. My design choices for my project were rudimentary and not always the most deliberate; I wanted, basically, to replicate things I saw on the US Census website and the way data was rendered. I chose things that seemed interesting to me, and that could 'work'. But I also may have locked myself into a pre-existing need to make it work for a purpose far more advanced than the goals of this class; I wanted to build a pedagogical for an MSW class I taught in summer 2023 on [social welfare policy and homelessness](https://github.com/perlsdiver/ITP-Labs/blob/main/Spring24-Git/Samples/HomelessPolicy-Summer23-syllabus.md). This distracted me somewhat from working with the data on its own terms (and thus letting the 'shape' emerge naturally), and likely put more pressure on me to produce something that reflected my aspirations for the class I was teaching, more than the modest goals of passing an elective that was far outside of my normal course of study or area of expertise..
+For my project, I decided to stay with the assigned data set - the US Census Bureau's 2020 American Community Survey. I used the NYC Department of City Planning's Census Tracts map for the map. My design choices for my project were rudimentary and not always the most deliberate; I wanted, basically, to replicate things I saw on the US Census website and the way data was rendered. I chose things that seemed interesting to me, and that could 'work'. But I also may have locked myself into a pre-existing need to make it work for a purpose far more advanced than the goals of this class; I wanted to build a pedagogical for an MSW class I taught in summer 2023 on [social welfare policy and homelessness](https://github.com/perlsdiver/ITP-Labs/blob/main/Spring24-Git/Samples/HomelessPolicy-Summer23-syllabus.md). This distracted me somewhat from working with the data on its own terms (and thus letting the 'shape' emerge naturally), and likely put more pressure on me to produce something that reflected my aspirations for the class I was teaching, more than the modest goals of passing an elective that was far outside of my normal course of study or area of expertise..
 
 I took an exploratory approach to the data, but I was also looking for a specific thing within it that I wasn't sure if existed, and wasn't something directly related to the stated goals and objectives of the data set in the American Community Survey. I initially wanted to examine the data for indicators of homelessness, and render that where possible. Data visualization, and information design, are not core parts of the social work curriculum. Yet they are increasingly important to how information is structured and consumed, and thus some familiarity can help greatly to develop the critical information literacy skills necessary to practice ethically and effectively. Sxo I wanted to give it a try as a proof of concept for a larger idea about incorporation intentional information visualization design as a pedagogical tool. I later concluded that it was better to use pre-existing tools such as those developed by betaNYC, such as [BoardStat](https://boardstat.beta.nyc/).
 
@@ -73,13 +69,13 @@ My initial question about homelessness changed after I attended the [NYC School 
 
 Through researching online and watching some YouTube videos, I learned that what I wanted to render was a choropleth map. This type of map uses shading to represent density and distribution within a defined geographic area. More sophisticated versions include bivariate or multivariate, which my data set could render, but I was not able to acheive this. I spent a fair amount of time wrangling the data and preprocessing it - the Census default format has its own syntax and code structure that took some massaging to align it with with GeoJSON data I sourced from NYC Open Data for the base layer map.
 
-I wanted to construct my visualization project as an object for exploration, and an experience that would invite reflection. Initially, that meant framing the visualization with more social theory - particulary some essays I really enjoyed about the politics of data visualization in academia and society:
+I wanted to construct my visualization project as an object for exploration, and an experience that would invite reflection. Initially, that meant framing the visualization with more social theory - particulary some essays I really enjoyed about the politics of data visualization in academia and society. The underlying arguments of scholarship in this line is that no data visualization is apolotical, and the rise of visualization and digital media as a scholarly output in some ways reflects the anxieties that much of academia has regarding its relevance and funding insecurity in the recent past.
 
 - Boehnert, J. (2016). Data visualisation does political things. DRS2016: Design+ research+ society: Future-focused thinking.
 
 - Kennedy, H., & Hill, R. L. (2017). The pleasure and pain of visualizing data in times of data power. Television & New Media, 18(8), 769-782.
 
-Perhaps that was not the right starting point for a technical demonstration. Looking back at the process, I would have liked to incorporate some of the design activities earlier on in the semester, and to have played around with assigned data set (or identifying a data set) from the first few weeks. Although the class did not focus on data wrangling and transformations, it would have helped to practice that (or see an example of preprocessed/pre-wrangled Census data) in our earlier tutorials, to start thinking about how to work with and transform it.
+Perhaps this more critical and theoretical approach was not the right starting point for a technical demonstration. Looking back at the process, I would have liked to incorporate some of the design activities earlier on in the semester, and to have played around with assigned data set (or identifying a data set) from the first few weeks. Although the class did not focus on data wrangling and transformations, it would have helped to practice that (or see an example of preprocessed/pre-wrangled Census data) in our earlier tutorials, to start thinking about how to work with and transform it.
 
 I settled on framing my project a bit more empirically, positioning my project as a small visual window into a much bigger picture compiled by the [Plumbing Poverty Project](https://www.theguardian.com/us-news/2021/sep/27/water-almost-half-million-us-households-lack-indoor-plumbing), who research plumbing in census data, and this 'hidden' form of poverty that is estimated to affect almost 500,000 people living in the United States. The map of New York City used the same data set, slicing and zooming it into a city-level view of this rather invisible social issue. This seemed like a very interesting issue in and of itself.
 
@@ -87,7 +83,7 @@ In my final version, I also added a very simple interactive table that displayed
 
 **Data wrangling**
 
-From the initial data set, I combined betaNYC's geoJSON shape file for NYC's Census boundaries with the ACS data set. I created a separate file that contained summary data organized for bar charts. It took me some time to figure out how to make the geoJSON file and shape data work. Initially I used R to explore and process the data set, as I was more familiar with data analysis using that language than JavaScript.
+From the initial data set, I combined [NYC Department of City Planning's 2020 Census geoJSON shape file](https://www.nyc.gov/site/planning/data-maps/open-data/census-download-metadata.page) the ACS data set. I created a separate file that contained summary data organized for bar charts. It took me some time to figure out how to make the geoJSON file and shape data work. Initially I used R to explore and process the data set, as I was more familiar with data analysis using that language than JavaScript.
 
 **Class feedback**
 
@@ -96,13 +92,26 @@ Class feedback in the initial presentation helped me to imagine how I might co-p
 Another part of our peer demonstrations was getting to see my classmates' design processes, including their iterations, their code snippets, and their mock-ups. It helped me to imagine different ways of putting together my project, as well as how users might interact with it. Offering feedback on theirs, as well, helped me feel a little more confident - that my ability to contribute was not limited to my techinical skill level. I greatly enjoyed these feedback processes and being a part of that learning community, and I was really impressed by the variety of projects and creativity of my colleagues.
 
 **The Roads Not Taken**
+
 There are several directions this project could have gone, or directions it could go in a future iteration. A first modification would be to add demographic data about each Census tract, as this current version solely contains data on housing characteristics. This misses a crucial part of the human story of these buidlings, and what other data might help understand the social characteristics of these areas. This fits in line with the origins of the Census, as well as the social survey movement of the late 1800's.
 
 Other directions to take would be layering in multiple sources of data, including city-level administative data available on NYC Open Data. It would be interesting to add layers of FDNY fire houses, 311 calls about heat or hot water, 311 calls about loose fire hydrants, and a layer of data about public bathrooms and pools nearby. Other data to analyze in this map could include evictions, property ownership patterns (in particular to see if any owners of renter-occupied buildings that lack plubming are owned by anyone on the NYC Public Advocate's worst landlords list).
 
 It would also be interesting to display a map that soley focused on Census tracts that contain higher densities of occupied buildings that lack working plumbing.
 
+**Screenshots**
+
+![Screenshot of time series](./media/tutorial_2_3_screenshot.png)
+Tutorial 2.3
+
+![Screenshot of table](./media/final_screenshot_table.png)
+Final Project: Table
+
+![Screenshot of map](./media/final_screenshot_map.png)
+Final Project: Map
+
 **Sketches**
+
 These are sketches from exercises conducted in class, which helped me to imagine my visual choices. They are also included in my prospectus.
 
 ![Sketches 1 and 2](/FinalProject/media/sketches-1.jpg)

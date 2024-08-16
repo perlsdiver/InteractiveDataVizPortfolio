@@ -10,7 +10,7 @@ const width = window.innerWidth * 0.8,
 /////////////////////////
 let state = {
   barData: null,
-  currentView: "Total:",
+  currentView: "Total_no_plumbing:",
 };
 
 /// Main function to load data and draw the bar charts
@@ -39,6 +39,21 @@ window.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+/// Function to aggregate data by County for the selected view
+function aggregateData(view) {
+  console.log("Aggregating data for view:", view);
+  const aggregatedData = d3.rollup(
+    state.barData,
+    v => d3.sum(v, d => d[view]),
+    d => d.County
+  );
+  
+  // Convert the Map returned by d3.rollup back to an array of objects
+  const result = Array.from(aggregatedData, ([County, total]) => ({ County, total }));
+  console.log("Aggregated data:", result);
+  return result;
+}
+
 /// Function to draw the bar chart based on the selected view
 function drawBarChart(view) {
     console.log("Drawing chart for view: ", view); // Debugging line
@@ -62,6 +77,11 @@ function drawBarChart(view) {
     .range([height - margin.top - margin.bottom, 0])
     .nice();
 
+// Defining a transition
+const t = d3.transition()
+.duration(750) // Set the duration of the transition (in milliseconds)
+.ease(d3.easeCubicInOut); // Set the easing function for the transition
+
   // Draw bars
   svg.selectAll(".bar")
     .data(state.barData)
@@ -71,20 +91,26 @@ function drawBarChart(view) {
     .attr("y", d => y(d[view]))
     .attr("width", x.bandwidth())
     .attr("height", d => height - margin.top - margin.bottom - y(d[view]))
-    .attr("fill", "#69b3a2");
+    .attr("fill", "#69b3a2")
+    .transition(t)
+    .attr("y", d => y(d.total)) // Transition to the correct position
+    .attr("height", d => height - margin.top - margin.bottom - y(d.total)); // Apply the transition;
+    
 
  // Add counts above bars
  // Still fixing this part
  svg.selectAll(".label")
- .data(state.barData)
+ .data(aggregateData)
  .enter().append("text")
  .attr("class", "label")
  .attr("x", d => x(d.County) + x.bandwidth() / 2)
- .attr("y", d => y(d[view]) - 5) // Position the text above the bar
+ .attr("y", height - margin.top - margin.bottom) // Start text from the bottom
  .attr("text-anchor", "middle")
  .attr("font-size", "1px")
  .attr("fill", "#000") // Text color
- .text(d => d[view]);
+ .text(d => d[view])
+ .transition(t) // Apply the transition
+ .attr("y", d => y(d.total) - 5); // Move text to the correct position;
 
   // Add x-axis
   svg.append("g")
@@ -100,7 +126,7 @@ function drawBarChart(view) {
     .attr("x", (width - margin.left - margin.right) / 2)
     .attr("y", height - margin.bottom)
     .attr("text-anchor", "middle")
-    .text(view);
+    .text(view.replace(/_/g, " ")); // Replace underscores with spaces for better readability;
 
   // Add y-axis label
   svg.append("text")

@@ -10,6 +10,9 @@ Welcome to my portfolio! It has has four components
 3. Reflection on the process and the course
 
 ##### **1. Links to projects**
+
+(__note: there is a discrepancy between how a table is rendered in Github and in Github Pages, so it's optimized for Github Pages. If viewing in the repository the table will not display properly__)
+
 | Section | Tutorial | Link To Deployment | Link To Code |
 
 | -------------- |--------- |---------------- |  -----|

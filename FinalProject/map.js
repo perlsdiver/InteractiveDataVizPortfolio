@@ -24,7 +24,6 @@ function main() {
 
     // Census data, wrangled to be easier to read
     d3.csv("../data/CensusData.csv", d3.autoType),
-
   
   ])
     .then(([NYCtracts, plumbingData, barData]) => {
@@ -99,6 +98,7 @@ function drawMap() {
     .attr("d", "M-1,1 l2,-2 M0,4 l4,-4 M3,5 l2,-2")
     .attr("stroke", "gray")
     .attr("stroke-width", .5);
+    
 
   // Define a clipPath to contain the map within the border
   // TODO: fix this... still not working
@@ -192,12 +192,12 @@ function addColorScaleLegend(svg, colorScale, width, height) {
   // Add a background box to contain the legend
   legendGroup.append("rect")
     .attr("width", legendWidth + padding * 2)
-    .attr("height", legendHeight * 2 + padding * 4)
+    .attr("height", legendHeight * 1.75 + padding * 2.5)
     .attr("x", -padding)
     .attr("y", -padding)
     .attr("fill", "#d3d3d3")  // Light gray background color
-    .attr("stroke", "#ccc")   // Border color
-    .attr("stroke-width", 1)
+    .attr("stroke", "black")   // Border color
+    .attr("stroke-width", .5)
     .attr("rx", 8)            // Rounded corners
     .attr("ry", 8);
 

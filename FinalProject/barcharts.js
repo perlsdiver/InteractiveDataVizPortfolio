@@ -27,7 +27,18 @@ function main() {
     });
 }
 
-window.addEventListener('DOMContentLoaded', main);
+window.addEventListener('DOMContentLoaded', function() {
+  main();
+
+  // Ensure the event listeners are attached after the DOM is fully loaded
+  d3.selectAll(".data-view").on("click", function(event) {
+    const selectedView = d3.select(this).attr("data-view");
+    console.log("Button clicked: ", selectedView); // Debugging line
+    state.currentView = selectedView;
+    drawBarChart(selectedView);
+  });
+});
+
 
 /// Function to draw the bar chart based on the selected view
 function drawBarChart(view) {

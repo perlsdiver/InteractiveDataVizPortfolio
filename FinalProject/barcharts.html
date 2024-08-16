@@ -7,6 +7,8 @@
   "text/html; charset=utf-8">
   <title>Final Project - Interactive Data Visualization</title>
   <link rel="stylesheet" href="style.css">
+  <script src="../lib/d3.min.js"></script>
+  <script src="./barcharts.js"></script>
 </head>
 <body>
   <!-- top matter -->
@@ -15,13 +17,13 @@
     
     <!-- Here I created a navbar -->
     <ul class="navbar">
-      <li class="navtab selected">
+      <li class="navtab">
         <a href="./index.html">Introduction</a>
       </li>
       <li class="navtab">
         <a href="./overview.html">Overview</a>
       </li>
-      <li class="navtab">
+      <li class="navtab selected">
         <a href="./barcharts.html">Bar Charts</a>
         </li>
       <li class="navtab">
@@ -38,17 +40,14 @@
       </li>
     </ul>
   </header>
-  <main>
-    <!-- The introductory page -->
-    <h2 class="section-title">Introduction</h2>
-    <h3 class="section-details">Interactive Data Visualization |
-    Spring 2023</h3>
-    <h3 class="section-details">Ian G. Williams</h3>
-    <p>Welcome to my project. Please click and explore the tabs in
-    order of left to right.</p><br>
-    <img class="centered" src=
-    "media/standard-plumbing-fixtures-1920s.jpg" alt=
-    "Standard Fixture Plumbing (source: Internet Archive)">
-  </main>
+  <body>
+    <h2 class="section-title"">Bar Charts</h2>
+    <p>Here are some bar charts made from the same data file.</p>
+      <br>
+      <b>Select Data to View</b2>
+      <br>
+      <button class="data-view" data-view="Total:">Total</button>
+      <button class="data-view" data-view="Total Owner occupied:">Owner Occupied</button>
+      <button class="data-view" data-view="Total Renter occupied:">Renter Occupied</button>
+      <div id="charts"></div>
 </body>
-</html>

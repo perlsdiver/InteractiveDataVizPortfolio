@@ -40,7 +40,7 @@ window.addEventListener('DOMContentLoaded', function() {
 });
 
 /// Function to draw the bar chart based on the selected view
-function drawBarChart(view) {
+function drawBarChart(view, sortByValue = false) {
   console.log("Drawing chart for view:", view);
 
   // Clear previous chart
@@ -50,12 +50,27 @@ function drawBarChart(view) {
   const filteredData = state.barData
   .filter(d => d['Row Labels'] !== 'Grand Total')  // Exclude the "Grand Total" row
   .map(d => ({
-    County: d['Row Labels'],  // Ensure you access the 'Row Labels' column correctly
+    County: d['Row Labels'].trim(),  // Ensure you access the 'Row Labels' column correctly
     total: d[view] || 0 // Fallback to 0 if the value is undefined
   }));
 
   // Log the filtered data for debugging
-  console.log("Filtered Data:", filteredData);
+  console.log("Filtered Data (Grand Total excluded, sortable)", filteredData);
+
+  // Sort data based on value if sortByValue is true
+  // Still working on this
+  if (sortByValue) {
+    filteredData.sort((a, b) => d3.descending(a.total, b.total));
+  }
+
+   // Log the filtered data for debugging
+   console.log("Filtered data after sorting", filteredData);
+
+  // Ensure filteredData is not empty and valid
+  if (filteredData.length === 0 || filteredData.some(d => isNaN(d.total))) {
+    console.error("Filtered data is empty or contains invalid entries after sorting:", filteredData);
+    return; // Exit the function if data is invalid
+  }
 
   const svg = d3.select("#charts").append("svg")
     .attr("width", width)
@@ -74,10 +89,11 @@ function drawBarChart(view) {
     .range([height - margin.top - margin.bottom, 0])
     .nice();
 
+  // Set up transition
   const t = d3.transition()
     .duration(1000)
-    .ease(d3.easeBounce)
-    .delay((d, i) => i * 150); // Delay each bar's transition by 100ms;
+    .ease(d3.easeElastic) // Transition style
+    .delay((d, i) => i * 150); // Delay each bar's transition
 
   // Draw bars with transition
   svg.selectAll(".bar")
@@ -88,7 +104,7 @@ function drawBarChart(view) {
     .attr("y", d => y(d.total))
     .attr("width", x.bandwidth())
     .attr("height", d => height - margin.top - margin.bottom - y(d.total))
-    .attr("fill", "#69b3a2")
+    .attr("fill", "#ad7627")
     .transition(t)
     .attr("y", d => y(d.total))
     .attr("height", d => height - margin.top - margin.bottom - y(d.total));
@@ -131,3 +147,24 @@ function drawBarChart(view) {
     .attr("font-size", "14px")
     .text("Counties");
 }
+
+// Add a global variable to track the sorting state
+let sortByValue = false;
+
+window.addEventListener('DOMContentLoaded', function() {
+  main();
+
+  d3.selectAll(".data-view").on("click", function(event) {
+    const selectedView = d3.select(this).attr("data-view");
+    console.log("Button clicked", selectedView);
+    state.currentView = selectedView;
+    drawBarChart(selectedView, sortByValue);
+  });
+
+  // Add event listener for the sort toggle button
+  d3.select("#sort-toggle").on("click", function() {
+    sortByValue = !sortByValue; // Toggle the sorting state
+    drawBarChart(state.currentView, sortByValue); // Redraw the chart with the new sorting
+  });
+});
+

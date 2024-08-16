@@ -182,3 +182,18 @@ table.sortable th.descending::after {
 .data-view:hover {
   background-color: #ddd;
 }
+
+#sort-toggle {
+  display: block;  /* Ensure it doesn't overlap other elements */
+  margin-top: 20px;  /* Adjust spacing from other elements */
+  padding: 10px 20px;
+  background-color: #73787a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#sort-toggle:hover {
+  background-color: #bbdbea;
+}

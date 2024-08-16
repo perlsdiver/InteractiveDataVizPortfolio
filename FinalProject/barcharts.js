@@ -39,7 +39,6 @@ window.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-
 /// Function to draw the bar chart based on the selected view
 function drawBarChart(view) {
     console.log("Drawing chart for view: ", view); // Debugging line
@@ -73,6 +72,19 @@ function drawBarChart(view) {
     .attr("width", x.bandwidth())
     .attr("height", d => height - margin.top - margin.bottom - y(d[view]))
     .attr("fill", "#69b3a2");
+
+ // Add counts above bars
+ // Still fixing this part
+ svg.selectAll(".label")
+ .data(state.barData)
+ .enter().append("text")
+ .attr("class", "label")
+ .attr("x", d => x(d.County) + x.bandwidth() / 2)
+ .attr("y", d => y(d[view]) - 5) // Position the text above the bar
+ .attr("text-anchor", "middle")
+ .attr("font-size", "1px")
+ .attr("fill", "#000") // Text color
+ .text(d => d[view]);
 
   // Add x-axis
   svg.append("g")

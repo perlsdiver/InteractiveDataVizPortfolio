@@ -12,13 +12,13 @@ Welcome to my portfolio! It has has four components
 ##### **1. Links to projects**
 | Section | Tutorial | Link To Deployment | Link To Code |
 | -------------- |--------- |---------------- |  -----|
-| Section 1 | Tutorial 1 | https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/1_1_getting_started/index.html | https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/1_1_getting_started |
-| Section 1 | Tutorial 2 | https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/1_2_basic_html/index.html | https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/1_2_basic_html |
-| Section 1 | Tutorial 3 | https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/1_3_intro_to_js/index.html | https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/1_3_intro_to_js |
-| Section 2 | Tutorial 1 | https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/2_1_quantities_and_amounts/index.html | https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/2_1_quantities_and_amounts |
-| Section 2 | Tutorial 2 | https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/2_2_distributions/index.html | https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/2_2_distributions |
-| Section 2 | Tutorial 3 | https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/2_3_time_series/index.html | https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/2_3_time_series | 
-| Section 2 | Tutorial 4 | https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/2_4_geographic/index.html | https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/2_4_geographic | 
+| 1 | 1 | https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/1_1_getting_started/index.html | https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/1_1_getting_started |
+| 1 | 2 | https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/1_2_basic_html/index.html | https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/1_2_basic_html |
+| 1 | 3 | https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/1_3_intro_to_js/index.html | https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/1_3_intro_to_js |
+| 2 | 1 | https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/2_1_quantities_and_amounts/index.html | https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/2_1_quantities_and_amounts |
+| 2 | 2 | https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/2_2_distributions/index.html | https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/2_2_distributions |
+| 2 | 3 | https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/2_3_time_series/index.html | https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/2_3_time_series | 
+| 2 | 4 | https://perlsdiver.github.io/Interactive-Data-Vis-Spring2023/2_4_geographic/index.html | https://github.com/perlsdiver/Interactive-Data-Vis-Spring2023/tree/main/2_4_geographic | 
 | Final | Final Project | https://perlsdiver.github.io/InteractiveDataVizPortfolio/FinalProject/index.html | https://github.com/perlsdiver/InteractiveDataVizPortfolio/tree/main/FinalProject | 
 
 

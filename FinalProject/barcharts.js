@@ -58,7 +58,7 @@ function drawBarChart(view, sortByValue = false) {
   console.log("Filtered Data (Grand Total excluded, sortable)", filteredData);
 
   // Sort data based on value if sortByValue is true
-  // Still working on this
+  // Still working on this; currently does not sort all values correctly
   if (sortByValue) {
     filteredData.sort((a, b) => d3.descending(a.total, b.total));
   }
